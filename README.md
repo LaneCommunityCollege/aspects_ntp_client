@@ -1,4 +1,4 @@
-Role Name
+aspects_mysql_client
 ========
 
 Ensure that the mysql command line client tools are installed. This does not install the server.
