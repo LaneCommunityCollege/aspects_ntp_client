@@ -1,7 +1,7 @@
-aspects_mysql_client
+aspects_ntp_client
 ========
 
-Ensure that the mysql command line client tools are installed. This does not install the server.
+Manage which servers your server queries for ntp information, as well as a few other configuration options. This does **not** let you set up an ntp *server*.
 
 Requirements
 ------------
@@ -11,19 +11,16 @@ Set ```hash_behaviour=merge``` in your ansible.cfg file.
 Role Variables
 --------------
 
-```yaml
-aspects_mysql_client_package_name:
-  Debian: "mysql-client"
-  RedHat: "mysql"
-```
-Simply override the ```aspects_mysql_client_packge_name``` dictionary in your local vars files, if you need to change package names.
+TODO: A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
 
 Example Playbook
 -------------------------
 
+TODO: Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+
     - hosts: servers
       roles:
-         - aspects_mysql_client
+         - { role: username.rolename, x: 42 }
 
 License
 -------
