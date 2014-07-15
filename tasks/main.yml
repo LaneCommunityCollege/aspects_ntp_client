@@ -4,10 +4,10 @@
 - name: include correct vars file
   include_vars: "roles/aspects_ntp_client/defaults/{{ ansible_os_family }}.yml"
   tags:
-    - ntp
+    - aspects_ntp_client
 
 - name: Set ntp.conf template
   template: src=ntp.conf.j2 dest=/etc/ntp.conf
   notify: restart ntp
   tags:
-    - ntp
+    - aspects_ntp_client
