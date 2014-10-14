@@ -1,5 +1,11 @@
 ---
 # file: roles/ntp_client/defaults/main.yml
+aspects_ntp_client_packages:
+  ntpclient:
+    state: "latest"
+    Debian: "ntp"
+    RedHat: "ntp"
+    Suse: "ntp"
 # most of this was cribbed from Ubuntu 12.04 default config.
 
 aspects_ntp_client_driftfile: "/var/lib/ntp/ntp.drift"

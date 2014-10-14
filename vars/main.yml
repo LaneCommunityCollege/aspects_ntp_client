@@ -1,4 +1,0 @@
----
-aspects_common_packages:
-  ntpclient:
-    state: "latest"
