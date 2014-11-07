@@ -3,8 +3,9 @@
 - include: installPackages.yml
   tags:
   - aspects_ntp_client
+
 - name: include correct vars file
-  include_vars: "roles/aspects_ntp_client/defaults/{{ ansible_os_family }}.yml"
+  include_vars: "{{ ansible_os_family }}.yml"
   tags:
     - aspects_ntp_client
 
