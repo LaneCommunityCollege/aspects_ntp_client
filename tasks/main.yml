@@ -10,7 +10,9 @@
     - aspects_ntp_client
 
 - name: Set ntp.conf template
-  template: src=ntp.conf.j2 dest=/etc/ntp.conf
+  template:
+    src: "templates/ntp.conf.j2"
+    dest: "/etc/ntp.conf"
   notify: restart ntp
   tags:
     - aspects_ntp_client
