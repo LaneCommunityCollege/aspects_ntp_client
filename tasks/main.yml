@@ -11,7 +11,7 @@
 
 - name: Set ntp.conf template
   template:
-    src: "templates/ntp.conf.j2"
+    src: "ntp.conf.j2"
     dest: "/etc/ntp.conf"
   notify: restart ntp
   tags:
