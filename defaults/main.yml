@@ -1,5 +1,6 @@
 ---
-# file: roles/ntp_client/defaults/main.yml
+aspects_ntp_client_enabled: False
+
 aspects_ntp_client_packages:
   ntpclient:
     state: "latest"

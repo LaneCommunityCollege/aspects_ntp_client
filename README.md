@@ -8,7 +8,12 @@ Set ```hash_behaviour=merge``` in your ansible.cfg file.
 
 ## Role Variables
 
-TODO: A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+### aspects_ntp_client_enabled
+Default: False
+
+Set to ```True``` if you want the role tasks to run.
+
+Set to ```False``` if you want to disable the role tasks.
 
 ## Example Playbook
 
