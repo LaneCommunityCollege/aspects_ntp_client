@@ -1,14 +1,21 @@
 ---
 aspects_ntp_client_enabled: False
-
-aspects_ntp_client_packages:
+aspects_packages_packages:
   ntpclient:
-    state: "latest"
-    Debian: "ntp"
-    RedHat: "ntp"
-    Suse: "ntp"
-# most of this was cribbed from Ubuntu 12.04 default config.
+    state: "present"
+    Ubuntu:
+      1404: "ntp"
+      1604: "ntp"
+      1804: "ntp"
+    Debian:
+      9: "ntp"
+    CentOS:
+      7: "ntp"
+    OracleLinux:
+      6: "ntp"
+      7: "ntp"
 
+# most of this was cribbed from Ubuntu 12.04 default config.
 aspects_ntp_client_driftfile: "/var/lib/ntp/ntp.drift"
 
 aspects_ntp_client_stats:
@@ -33,3 +40,5 @@ aspects_ntp_client_restrict:
   - "-6 default kod notrap nomodify nopeer noquery"
   - "127.0.0.1"
   - "::1"
+
+aspects_ntp_client_service_name: "{% if ansible_os_family == 'RedHat' %}ntpd{% else %}ntp{% endif %}"

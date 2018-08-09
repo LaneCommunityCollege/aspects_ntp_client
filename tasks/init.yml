@@ -1,15 +1,4 @@
 ---
-# file: roles/ntp_client/tasks/main.yml
-- include: installPackages.yml
-  tags:
-  - aspects_ntp_client
-  - aspects_ntp_client_package_install
-
-- name: include correct vars file
-  include_vars: "{{ ansible_os_family }}.yml"
-  tags:
-    - aspects_ntp_client
-
 - name: Set ntp.conf template
   template:
     src: "ntp.conf.j2"
