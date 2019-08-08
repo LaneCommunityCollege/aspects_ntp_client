@@ -44,7 +44,6 @@ On some systems, chrony is used by default instead of ntp. You can easily remove
       chrony:
         state: "absent"
         Ubuntu:
-          1404: "chrony"
           1604: "chrony"
           1804: "chrony"
         Debian:
@@ -52,7 +51,6 @@ On some systems, chrony is used by default instead of ntp. You can easily remove
         CentOS:
           7: "chrony"
         OracleLinux:
-          6: "chrony"
           7: "chrony"
   roles:
   - aspects_ntp_client

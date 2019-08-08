@@ -4,7 +4,6 @@ aspects_packages_packages:
   ntpclient:
     state: "present"
     Ubuntu:
-      1404: "ntp"
       1604: "ntp"
       1804: "ntp"
     Debian:
@@ -12,7 +11,6 @@ aspects_packages_packages:
     CentOS:
       7: "ntp"
     OracleLinux:
-      6: "ntp"
       7: "ntp"
 
 # most of this was cribbed from Ubuntu 12.04 default config.

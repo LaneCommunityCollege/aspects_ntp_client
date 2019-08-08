@@ -1,6 +1,6 @@
 ---
 - name: "Include tasks when enabled."
   when: aspects_ntp_client_enabled
-  include: init.yml
+  include_tasks: init.yml
   tags:
   - aspects_ntp_client
