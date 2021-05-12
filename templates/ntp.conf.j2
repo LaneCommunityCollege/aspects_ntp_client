@@ -11,10 +11,10 @@ statistics {{ aspects_ntp_client_stats.statistics_line }}
 {% endfor %}
 {% endif %}
 
-{% for server in aspects_ntp_client_servers %}
+{% for server in aspects_ntp_client_servers | sort %}
 server {{ server }}
 {% endfor %}
 
-{% for restrict in aspects_ntp_client_restrict %}
+{% for restrict in aspects_ntp_client_restrict | sort %}
 restrict {{ restrict }}
 {% endfor %}
