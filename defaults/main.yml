@@ -4,11 +4,9 @@ aspects_packages_packages:
   ntpclient:
     state: "present"
     Ubuntu:
-      1604: "ntp"
       1804: "ntp"
       2004: "ntp"
     Debian:
-      9: "ntp"
       10: "ntp"
     CentOS:
       7: "ntp"
